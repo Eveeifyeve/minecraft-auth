@@ -1,0 +1,5 @@
+/target
+
+# Ignoreing Enviroment
+.env
+.env.local

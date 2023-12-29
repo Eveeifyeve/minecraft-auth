@@ -1,0 +1,16 @@
+name: Custom Template
+about: A Custom Template
+title: ''
+labels: ''
+assignees: 'eveeifyeve'
+milestone: ''
+
+body: 
+  - type: input
+    id: value
+    attributes:
+      label: Value
+      description: The value of the template.
+      placeholder: 'The Vaule for the template'
+      value: ''
+      required: true

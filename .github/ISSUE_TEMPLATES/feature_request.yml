@@ -1,0 +1,40 @@
+name: Feature Request
+about: Suggest an idea for this project
+title: ''
+labels: [enhancement]
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+
+  - type: input
+    id: feature
+    attributes:
+      label: Feature
+      description: What feature would you like to suggest?
+      placeholder: Enter the feature you'd like to suggest here
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-details
+    attributes:
+      label: Feature Details
+      description: Please describe the feature in detail.
+      placeholder: Provide more details about the feature here
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Agreement
+      description: Please confirm the following
+      options:
+        - label: I have searched the existing issues and this is a new feature request, not a duplicate.
+          required: true
+        - label: I have described the feature in detail.
+          required: true

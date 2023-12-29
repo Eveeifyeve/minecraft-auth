@@ -1,0 +1,19 @@
+{
+    "extends": ["config:base"],
+    "packageRules": [
+      {
+        "matchManagers": ["cargo"],
+        "groupName": "cargo dependencies",
+        "schedule": ["every weekend"],
+        "commitType": "chore",
+        "commitBody": "update cargo dependencies"
+      }
+    ],
+    "semanticCommits": true,
+    "semanticCommitType": "chore",
+    "semanticCommitScope": "deps",
+    "vulnerabilityAlerts": {
+      "labels": ["security"],
+      "assignees": ["eveeifyeve"]
+    }
+  }
