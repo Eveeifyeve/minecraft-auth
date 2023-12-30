@@ -5,7 +5,6 @@
         "matchManagers": ["cargo"],
         "groupName": "cargo dependencies",
         "schedule": ["every weekend"],
-        "commitType": "chore",
         "commitBody": "update cargo dependencies"
       }
     ],
