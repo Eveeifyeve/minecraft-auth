@@ -9,6 +9,22 @@ pub use oauth::Info as OauthInfo;
 use rand::Rng;
 
 /// A structure providing login capabilities for Microsoft accounts, using OAuth2.0.
+///
+/// # Example
+///
+/// ```rust
+/// use minecraft_auth::*;
+/// 
+/// # tokio::task::spawn(async move {
+/// let client_id = "111231209837123098712";
+/// 
+/// let oauth = Oauth::new(client_id);
+/// println!("Login here: {}", oauth.url());
+/// 
+/// let oauth_info = oauth.launch().await.unwrap();
+/// # let _ = oauth_info;
+/// # });
+/// ```
 pub struct Oauth {
     url: String,
     port: u16,
@@ -35,6 +51,7 @@ impl Oauth {
     }
 }
 
+/// The credentials to a Minecraft (not Microsoft!) account.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct AuthData {
     pub access_token: String,

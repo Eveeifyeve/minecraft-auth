@@ -1,10 +1,11 @@
-//! The server for OAauth login
+//! The server for OAuth login
 
 use actix_web::{web, App, HttpResponse, HttpServer};
 use serde::Deserialize;
 use std::str;
 use tokio::sync::mpsc;
 
+/// The credentials to a Microsoft account, obtained through OAuth.
 #[derive(Deserialize)]
 pub struct Info {
     pub code: String,
