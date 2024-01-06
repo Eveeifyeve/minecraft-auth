@@ -7,30 +7,26 @@
 Minecraft authentication library for Rust.
 
 ## Features
-- Provides two methods for Minecraft account authentication: `Device Code` and `OAuth2.0`.
-- Outperforms other Minecraft authentication libraries in terms of speed and efficiency.
-- Performance!
+
+- Complete - Supports the two main auth methods: OAuth 2.0 and Device Code.
+- Fast - outperforms other authentication libraries
+- Safe - `#![forbid(unsafe_code)]`
 
 ## Usage
-This library provides two main functions: `oauth` and `device_code`.
 
-The `oauth` function initiates the `OAuth2.0` process for Minecraft authentication, without providing a code. It returns a url for the authentification and then provides the accessToken and UUID based if your logged in.
+This library provides two main structures: `Oauth` and `DeviceCode`.
 
-The `device` function initiates the `Device Code` process for Minecraft authentication, you have to provide a code to access the authentification. It provides the url and the code for the authentifcation and then provides the accessToken and UUID based if your logged in.
+## Examples
 
+### OAuth
 
-## Example of OAuth method
+```rust,ignore
+use minecraft_auth::*;
 
+let client_id = "111231209837123098712";
 
-```rust
-//Todo: OAuth Example.
+let oauth = Oauth::new(client_id);
+println!("Login here: {}", oauth.url());
+
+let oauth_info = oauth.launch().await?;
 ```
-
-
-## Example of Device code method
-
-
-```rust
-//Todo: Device code Example.
-```
-

@@ -1,5 +1,3 @@
 /target
-
-# Ignoreing Enviroment
-.env
-.env.local
+**/.direnv
+**/.devenv
